@@ -4780,7 +4780,7 @@ button[type="submit"].button--link:hover {
 }
 
 .hero-2 {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/hero-3.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/hero-1.jpg");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4791,7 +4791,7 @@ button[type="submit"].button--link:hover {
 }
 
 .hero-3 {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/hero-4.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/hero-2.jpg");
   background-position: left;
   display: flex;
   flex-direction: column;
@@ -4804,7 +4804,7 @@ button[type="submit"].button--link:hover {
   height: 100%;
   left: 0;
   top: 0;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/hero-4.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/hero-2.jpg");
   background-position: left;
   -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
@@ -4983,7 +4983,7 @@ button[type="submit"].button--link:hover {
 }
 
 .home-2 .our-testimonial {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/background-3.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/background-1.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

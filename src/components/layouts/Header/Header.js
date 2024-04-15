@@ -1,19 +1,61 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import DarkLogo from "../../../assets/images/logo-dark.png";
 import LightLogo from "../../../assets/images/logo-light.png";
 
 const Header = () => {
+  // State variables to manage logo and menu toggles
+  const [scrollClasses, setScrollClasses] = useState("");
+  const [scrollLogo, setScrollLogo] = useState("");
+
+  useEffect(() => {
+    // Function to handle scroll events
+    const handleScroll = () => {
+      // Calculate scroll amount
+      const scrollAmount = 100;
+      const scrolled = window.scrollY;
+
+      // Check if scroll amount is exceeded
+      if (scrolled > scrollAmount) {
+        setScrollClasses("dark-text white-bg");
+        setScrollLogo(DarkLogo);
+      } else {
+        setScrollClasses("light-text transparent");
+        setScrollLogo(LightLogo);
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Function to open mobile menu
+  const openMenu = () => {
+    const menuToggle = document.querySelector("[data-toggle=mobile-menu]");
+    const menuMobile = document.getElementById(menuToggle.getAttribute("aria-controls"));
+    const open = JSON.parse(menuToggle.getAttribute("aria-expanded"));
+    menuToggle.setAttribute("aria-expanded", !open);
+    menuMobile.classList.toggle("active");
+    menuToggle.classList.toggle("rotate");
+    document.body.classList.toggle("overflow-hidden");
+  };
+
+  // Function to prevent default action for dropdown links
+  const preventDefaultAction = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <header
-      className="header transparent fixed light-text"
-      data-onscroll-classes="dark-text white-bg"
-      data-onscroll-logo={DarkLogo}
-    >
+    <header className={`header ${scrollClasses} fixed`} data-onscroll-classes={scrollClasses} data-onscroll-logo={scrollLogo}>
       <div className="container">
         <nav className="header__nav bottom-nav">
           <div className="header__logo brand--logo">
             <a href="index.html">
-              <img src={LightLogo} alt="Greater Love Church" />
+              <img src={scrollLogo} alt="Greater Love Church" />
             </a>
           </div>
           <div className="header__mobile--opener hide-on-lg">
@@ -22,6 +64,7 @@ const Header = () => {
               aria-expanded="false"
               aria-controls="mobile-menu"
               data-toggle="mobile-menu"
+              onClick={openMenu}
             >
               <span className="line" />
               <span className="line" />
@@ -123,7 +166,7 @@ const Header = () => {
             <li className="header__list">
               <a href="contact.html">Contact</a>
             </li>
-          </ul>
+            </ul>
           <div className="header__extra desktop-version">
             <div className="cta hide-on-sm show-on-lg">
               <a href="donations.html" className="button">

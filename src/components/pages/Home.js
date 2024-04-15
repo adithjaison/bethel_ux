@@ -12,11 +12,12 @@ import TimeLocation from "../layouts/TimeLocation/TimeLocation";
 import Footer from "../layouts/Footer/Footer";
 import "../../assets/dist/css/main.css";
 import PageLoader from "../layouts/PageLoader/PageLoader";
-import "../../assets/js/plugins/owl.carousel.js";
-import "../../assets/js/plugins/jquery.card.js";
-import "../../assets/js/plugins/aos.js";
-import "../../assets/js/plugins/lightbox.min.js";
-import "../../assets/dist/js/main.min.js";
+// import "../../assets/js/main.js";
+// import "../../assets/js/plugins/owl.carousel.js";
+// import "../../assets/js/plugins/jquery.card.js";
+// import "../../assets/js/plugins/aos.js";
+// import "../../assets/js/plugins/lightbox.min.js";
+
 
 const Home = () => {
   return (

@@ -1,3 +1,7 @@
+import AOS from 'aos';
+import Card from 'card';
+import $ from 'jquery';
+
 // PAGE LOADER ======================================= // 
 window.addEventListener("load", function () {
 
