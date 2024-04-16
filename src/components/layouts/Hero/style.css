@@ -1,0 +1,159 @@
+
+.hero {
+  height: 70rem;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 34.5625em) {
+  .hero {
+    height: 90rem;
+  }
+}
+
+@media screen and (min-width: 56.3125em) {
+  .hero {
+    height: 60rem;
+  }
+}
+
+@media screen and (min-width: 87.5625em) {
+  .hero {
+    height: 70rem;
+  }
+}
+
+.hero__content .hero__intro {
+  font-family: "Lobster Two", cursive;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.hero__content h1 {
+  font-size: 4.5rem;
+}
+
+.hero__content .hero__cta {
+  margin-top: 4rem;
+}
+
+.hero-2 {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/hero-1.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-2 .hero__content {
+  color: #ffffff;
+}
+
+.hero-3 {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/hero-2.jpg");
+  background-position: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-3 .hero__clip--cover {
+  position: absolute;
+  width: 41.6666666667%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/hero-2.jpg");
+  background-position: left;
+  -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+}
+
+.hero-3 .hero__content {
+  color: #ffffff;
+  padding-top: 12rem;
+  position: relative;
+  z-index: 15;
+}
+
+#hero-carousel {
+  height: 100%;
+}
+
+#hero-carousel .hero__intro,
+#hero-carousel h1,
+#hero-carousel p {
+  color: #ffffff;
+}
+
+#hero-carousel .slide {
+  height: 70rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 34.5625em) {
+  #hero-carousel .slide {
+    height: 90rem;
+  }
+}
+
+@media screen and (min-width: 56.3125em) {
+  #hero-carousel .slide {
+    height: 60rem;
+  }
+}
+
+@media screen and (min-width: 87.5625em) {
+  #hero-carousel .slide {
+    height: 70rem;
+  }
+}
+
+#hero-carousel #first-slide {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/hero-1.jpg");
+}
+
+#hero-carousel #second-slide {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/hero-2.jpg");
+}
+
+#hero-carousel .owl-nav .owl-prev {
+  left: 2rem;
+}
+
+#hero-carousel .owl-nav .owl-next {
+  right: 2rem;
+}
+
+#hero-carousel .owl-dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero-carousel .owl-dots .owl-dot {
+  width: 4rem;
+  height: 1rem;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+}
+
+#hero-carousel .owl-dots .owl-dot:first-child {
+  margin-right: 2rem;
+}
+
+#hero-carousel .owl-dots .owl-dot.active, #hero-carousel .owl-dots .owl-dot:hover {
+  background-color: #ead94c;
+}
+

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DarkLogo from "../../../assets/images/logo-dark.png";
 import LightLogo from "../../../assets/images/logo-light.png";
+import "./style.css";
 
 const Header = () => {
   // State variables to manage logo and menu toggles
@@ -36,7 +37,9 @@ const Header = () => {
   // Function to open mobile menu
   const openMenu = () => {
     const menuToggle = document.querySelector("[data-toggle=mobile-menu]");
-    const menuMobile = document.getElementById(menuToggle.getAttribute("aria-controls"));
+    const menuMobile = document.getElementById(
+      menuToggle.getAttribute("aria-controls")
+    );
     const open = JSON.parse(menuToggle.getAttribute("aria-expanded"));
     menuToggle.setAttribute("aria-expanded", !open);
     menuMobile.classList.toggle("active");
@@ -50,7 +53,11 @@ const Header = () => {
   };
 
   return (
-    <header className={`header ${scrollClasses} fixed`} data-onscroll-classes={scrollClasses} data-onscroll-logo={scrollLogo}>
+    <header
+      className={`header ${scrollClasses} fixed`}
+      data-onscroll-classes={scrollClasses}
+      data-onscroll-logo={scrollLogo}
+    >
       <div className="container">
         <nav className="header__nav bottom-nav">
           <div className="header__logo brand--logo">
@@ -166,7 +173,7 @@ const Header = () => {
             <li className="header__list">
               <a href="contact.html">Contact</a>
             </li>
-            </ul>
+          </ul>
           <div className="header__extra desktop-version">
             <div className="cta hide-on-sm show-on-lg">
               <a href="donations.html" className="button">

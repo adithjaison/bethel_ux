@@ -1,0 +1,481 @@
+/**
+* Add the correct display in IE 9-.
+*/
+header,
+section {
+  display: block;
+}
+
+.header {
+  width: 100%;
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header {
+    position: relative;
+    z-index: 100;
+  }
+}
+
+.header .header__nav {
+  position: relative;
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.header .header__logo {
+  width: 15rem;
+}
+
+.header .header__logo a {
+  width: 100%;
+  height: 100%;
+}
+
+.header .header__logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.header .header__top-nav {
+  position: relative;
+  font-size: 2rem;
+  padding: 2rem 0;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__top-nav {
+    font-size: 1.6rem;
+    padding: 1.2rem 0;
+  }
+}
+
+.header .header__top-nav .header__option {
+  display: flex;
+  align-items: center;
+}
+
+.header .header__top-nav .header__option .email {
+  margin-right: 2rem;
+}
+
+.header .header__top-nav .header__option .desktop,
+.header .header__top-nav .header__option .email a {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.header .header__top-nav .header__option .desktop i,
+.header .header__top-nav .header__option .email a i {
+  margin-right: 2rem;
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__top-nav .header__option .desktop i,
+  .header .header__top-nav .header__option .email a i {
+    margin-right: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__extra.desktop-version {
+    margin-left: 6rem;
+  }
+}
+
+.header .header__mobile--opener {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.header .header__mobile--icon {
+  position: relative;
+  background-color: transparent;
+  width: 5rem;
+  height: 5rem;
+  font-size: 4.5rem;
+  padding: 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.header .header__mobile--icon.rotate {
+  transform: rotate(90deg);
+  height: 4rem;
+  width: 4rem;
+}
+
+.header .header__mobile--icon span {
+  transition: all 0.3s ease-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 0.3rem;
+  background-color: #274f73;
+}
+
+.header .header__mobile--icon span:nth-child(1) {
+  top: 20%;
+  transform: translate(-50%, 0);
+}
+
+.header .header__mobile--icon span:nth-child(3) {
+  top: auto;
+  bottom: 20%;
+  transform: translate(-50%, 0);
+}
+
+.header .header__navitems {
+  background-color: #ffffff;
+  width: 80%;
+  height: 100%;
+  padding: 2rem 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  z-index: 100;
+  box-shadow: 0 0.12rem 1.4rem rgba(0, 0, 0, 0.28);
+  transition: all 0.3s ease-out;
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__navitems {
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+    position: initial;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    transform: translateX(0);
+    padding: 0;
+    overflow-y: visible;
+    z-index: 0;
+    box-shadow: none;
+    transition: none;
+    margin: 0 6rem;
+    margin-right: 0;
+  }
+}
+
+.header .header__navitems.active {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.header .header__navitems .header__extra {
+  padding: 0 2rem 2rem 2rem;
+  position: relative;
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__navitems .header__extra {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.header .header__navitems .header__extra::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: calc(100% - 8rem);
+  height: 0.2rem;
+  background-color: #d1d1d1;
+}
+
+.header .header__navitems .header__extra .cta--search .form__group {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.header .header__navitems .header__extra .cta--search i {
+  color: #d1d1d1;
+}
+
+.header .header__navitems .header__list {
+  position: relative;
+}
+
+.header .header__navitems .header__list a {
+  position: relative;
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.8rem;
+  padding: 2rem 1.6rem;
+  color: #000000;
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__navitems .header__list a {
+    font-size: 1.4rem;
+    padding: 2.5rem 1.4rem;
+  }
+}
+
+@media screen and (min-width: 87.5625em) {
+  .header .header__navitems .header__list a {
+    font-size: 1.5rem;
+    padding: 2.5rem 2rem;
+  }
+}
+
+.header .header__navitems .header__list.active > a,
+.header .header__navitems .header__list:hover > a {
+  color: #274f73;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__navitems .header__list.active > a,
+  .header .header__navitems .header__list:hover > a {
+    font-weight: 400;
+  }
+}
+
+.header .header__navitems .header__list > .header__submenu {
+  margin-left: 10%;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__navitems .header__list > .header__submenu .header__list > a {
+    padding: 1.2rem 2rem;
+  }
+}
+
+.header .header__navitems .header__list > .header__submenu .header__list:hover > a,
+.header .header__navitems .header__list > .header__submenu .header__list.active > a {
+  background-color: #274f73;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__navitems .header__list > .header__submenu {
+    width: 22rem;
+    margin-left: 0;
+    background-color: #ffffff;
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: 160%;
+    max-height: initial;
+    box-shadow: 0 0.12rem 1.4rem rgba(0, 0, 0, 0.28);
+  }
+}
+
+@media screen and (min-width: 87.5625em) {
+  .header .header__navitems .header__list > .header__submenu a {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__navitems .header__list > .header__submenu a i {
+    right: 2rem;
+  }
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__navitems .header__list > .header__submenu a::before {
+    transform: rotate(0deg);
+    top: 0;
+    left: 0;
+  }
+}
+
+.header .header__navitems .header__list:hover > .header__submenu {
+  max-height: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__navitems .header__list:hover > .header__submenu {
+    max-height: initial;
+    top: 100%;
+  }
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__navitems .header__submenu .header__submenu {
+    left: 130%;
+    transition: all 0.3s ease-out;
+  }
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__navitems .header__submenu .header__list:hover .header__submenu {
+    left: 100%;
+    top: 0;
+  }
+}
+
+.header.white-bg .header__extra.desktop-version .shopping-cart .bag i {
+  color: #000000;
+}
+
+.header .header__extra.desktop-version {
+  display: flex;
+  align-items: center;
+}
+
+.header .header__extra.desktop-version .shopping-cart {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__extra.desktop-version .shopping-cart {
+    position: initial;
+    transform: translate(0, 0);
+  }
+}
+
+.header .header__extra.desktop-version .shopping-cart .bag {
+  position: relative;
+  font-size: 3.5rem;
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__extra.desktop-version .shopping-cart .bag {
+    font-size: 2.5rem;
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+}
+
+.header .header__extra.desktop-version .shopping-cart .bag i {
+  color: #ffffff;
+}
+
+.header .header__extra.desktop-version .shopping-cart .bag span.full {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background-color: #274f73;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__extra.desktop-version .shopping-cart .bag span.full {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+.header .header__extra.desktop-version .shopping-cart .bag:hover i {
+  color: #ead94c;
+}
+
+.header .header__top-nav .header__extra.desktop-version {
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.header .header__top-nav .header__extra.desktop-version .shopping-cart {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header .header__top-nav .header__extra.desktop-version .shopping-cart {
+    position: initial;
+    transform: translate(0, 0);
+  }
+}
+
+.header.transparent {
+  background-color: transparent;
+  transition: all 0.3s ease-out;
+}
+
+.header.white-bg {
+  background-color: #ffffff;
+  box-shadow: 0 0.12rem 1.4rem rgba(0, 0, 0, 0.28);
+  transition: all 0.3s ease-out;
+}
+
+.header.white-bg .header__mobile--icon span {
+  background-color: #274f73;
+}
+
+.header.white-bg .header__top-nav .header__option .desktop,
+.header.white-bg .header__top-nav .header__option .email a {
+  color: #000000;
+}
+
+.header.dark-bg {
+  background-color: #000000;
+  box-shadow: 0 0.12rem 1.4rem rgba(0, 0, 0, 0.28);
+  transition: all 0.3s ease-out;
+}
+
+.header.dark-bg .header__mobile--icon span {
+  background-color: #274f73;
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header.light-text .header__navitems .header__list a {
+    color: #ffffff;
+  }
+  .header.light-text .header__navitems .header__list.active > a,
+  .header.light-text .header__navitems .header__list:hover > a {
+    color: #274f73;
+  }
+  .header.light-text .header__navitems .header__submenu a {
+    color: #000000;
+  }
+}
+
+@media screen and (min-width: 56.3125em) {
+  .header.dark-text .header__navitems .header__list a {
+    color: #000000;
+  }
+  .header.dark-text .header__navitems .header__list.active > a,
+  .header.dark-text .header__navitems .header__list:hover > a {
+    color: #274f73;
+  }
+  .header.dark-text .header__navitems .header__submenu a {
+    color: #000000;
+  }
+}
+
+.header.dark-text .header__extra.desktop-version .shopping-cart .bag i {
+  color: #000000;
+}
+
+.header.dark-text .header__extra.desktop-version .shopping-cart .bag:hover i {
+  color: #ead94c;
+}

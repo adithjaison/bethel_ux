@@ -23,87 +23,87 @@ window.addEventListener("load", function () {
 
 // HEADER ====================================== // 
 // Mini plugin for the header
-const headers = document.querySelectorAll(".header");
+// const headers = document.querySelectorAll(".header");
 
-headers.forEach(function (current) {
+// headers.forEach(function (current) {
 
-  let originalClasses = current.className, // Classes to be added on scroll
-    scrollClasses = current.getAttribute("data-onscroll-classes"), // Classes to be added on scroll
-    scrollLogo = current.getAttribute("data-onscroll-logo"), // Logo to show on scroll
-    brandLogo = current.querySelector(".header__logo img"), // Gets the current logo img tag
-    brandLogoUrl = current.querySelector(".header__logo img").getAttribute("src"), // Gets the current logo src
-    menuToggle = current.querySelector("[data-toggle]"), // Gets the element to toggle the naviagtion on mobile devices
-    menuMobile, // Gets the menu for the mobile or submenu
-    dropdownLink = current.querySelectorAll(".dropdown-link"), // Gets the dropdown links
-    searchToggle = current.querySelector("[data-search]"), // Gets the element to toggle the search form
-    searchForm, // Gets the search form
-    scrollAmount = 100; // how far down (in px) 
-
-
-  // Preventing the link default action
-  for (let i = 0; i < dropdownLink.length; i++) {
-    dropdownLink[i].addEventListener("click", function (e) {
-      e.preventDefault();
-    })
-  }
+//   let originalClasses = current.className, // Classes to be added on scroll
+//     scrollClasses = current.getAttribute("data-onscroll-classes"), // Classes to be added on scroll
+//     scrollLogo = current.getAttribute("data-onscroll-logo"), // Logo to show on scroll
+//     brandLogo = current.querySelector(".header__logo img"), // Gets the current logo img tag
+//     brandLogoUrl = current.querySelector(".header__logo img").getAttribute("src"), // Gets the current logo src
+//     menuToggle = current.querySelector("[data-toggle]"), // Gets the element to toggle the naviagtion on mobile devices
+//     menuMobile, // Gets the menu for the mobile or submenu
+//     dropdownLink = current.querySelectorAll(".dropdown-link"), // Gets the dropdown links
+//     searchToggle = current.querySelector("[data-search]"), // Gets the element to toggle the search form
+//     searchForm, // Gets the search form
+//     scrollAmount = 100; // how far down (in px) 
 
 
-  // Opening the mobile menu
-  if (menuToggle) menuToggle.addEventListener("click", openMenu);
-  // Adds classes on scroll
-  if (scrollClasses) addClasses();
-  // Changes logo on scroll
-  if (scrollLogo) changeLogo();
+//   // Preventing the link default action
+//   for (let i = 0; i < dropdownLink.length; i++) {
+//     dropdownLink[i].addEventListener("click", function (e) {
+//       e.preventDefault();
+//     })
+//   }
 
 
-  // FUNCTIONS ======================== // 
-  function openMenu() { // opens mobile menu
+//   // Opening the mobile menu
+//   if (menuToggle) menuToggle.addEventListener("click", openMenu);
+//   // Adds classes on scroll
+//   if (scrollClasses) addClasses();
+//   // Changes logo on scroll
+//   if (scrollLogo) changeLogo();
 
 
-    let menuToggleTarget = menuToggle.getAttribute("data-toggle");
-
-    const open = JSON.parse(menuToggle.getAttribute("aria-expanded")); // converts to boolean and returns true or false
-    menuToggle.setAttribute("aria-expanded", !open);
-
-    menuMobile = current.querySelector("#" + menuToggleTarget); // Gets the menu that needs to be display
-    menuMobile.classList.toggle("active"); // shows and hides the menu
-    menuToggle.classList.toggle("rotate"); // little animation for the hamburger icon
-
-    document.body.classList.toggle("overflow-hidden"); // prevent scrolling on the page while the menu is being shown
-  };
+//   // FUNCTIONS ======================== // 
+//   function openMenu() { // opens mobile menu
 
 
-  function scrollEvents(type) {
+//     let menuToggleTarget = menuToggle.getAttribute("data-toggle");
 
-    let scrolled = window.scrollY;
+//     const open = JSON.parse(menuToggle.getAttribute("aria-expanded")); // converts to boolean and returns true or false
+//     menuToggle.setAttribute("aria-expanded", !open);
 
-    if (scrolled > scrollAmount) {
-      if (type === "class") {
-        current.className = originalClasses + " " + scrollClasses;
-      } else {
-        brandLogo.setAttribute("src", scrollLogo);
-      }
-    }
+//     menuMobile = current.querySelector("#" + menuToggleTarget); // Gets the menu that needs to be display
+//     menuMobile.classList.toggle("active"); // shows and hides the menu
+//     menuToggle.classList.toggle("rotate"); // little animation for the hamburger icon
 
-    else {
-      if (type === "class") {
-        current.className = "";
-        current.className = originalClasses
-      } else {
-        brandLogo.setAttribute("src", "");
-        brandLogo.setAttribute("src", brandLogoUrl);
-      }
-
-    }
-
-  }
+//     document.body.classList.toggle("overflow-hidden"); // prevent scrolling on the page while the menu is being shown
+//   };
 
 
-  function addClasses() { window.addEventListener("scroll", function () { scrollEvents("class") }); };
+//   function scrollEvents(type) {
 
-  function changeLogo() { window.addEventListener("scroll", function () { scrollEvents("logo") }); };
+//     let scrolled = window.scrollY;
 
-});
+//     if (scrolled > scrollAmount) {
+//       if (type === "class") {
+//         current.className = originalClasses + " " + scrollClasses;
+//       } else {
+//         brandLogo.setAttribute("src", scrollLogo);
+//       }
+//     }
+
+//     else {
+//       if (type === "class") {
+//         current.className = "";
+//         current.className = originalClasses
+//       } else {
+//         brandLogo.setAttribute("src", "");
+//         brandLogo.setAttribute("src", brandLogoUrl);
+//       }
+
+//     }
+
+//   }
+
+
+//   function addClasses() { window.addEventListener("scroll", function () { scrollEvents("class") }); };
+
+//   function changeLogo() { window.addEventListener("scroll", function () { scrollEvents("logo") }); };
+
+// });
 
 
 // CAROUSELS ================================ // 
