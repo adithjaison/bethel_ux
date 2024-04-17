@@ -2,6 +2,7 @@ import React from "react";
 import Ministry1 from "../../../assets/images/ministry-1@1.5x.jpg";
 import Ministry2 from "../../../assets/images/ministry-2@1.5x.jpg";
 import Ministry3 from "../../../assets/images/ministry-3@1.5x.jpg";
+import "./style.css"
 
 const Ministries = () => {
   return (

@@ -1,4 +1,5 @@
 .next-event {
+  border-radius: 0.5rem; 
   color: #ffffff;
   -webkit-clip-path: none;
           clip-path: none;
