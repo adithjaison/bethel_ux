@@ -61,7 +61,7 @@ const Header = () => {
       <div className="container">
         <nav className="header__nav bottom-nav">
           <div className="header__logo brand--logo">
-            <a href="index.html">
+            <a href="/">
               <img src={scrollLogo} alt="Greater Love Church" />
             </a>
           </div>
@@ -87,7 +87,7 @@ const Header = () => {
               </div>
             </li>
             <li className="header__list active">
-              <a href="index.html">Home</a>
+              <a href="/">Home</a>
             </li>
             <li className="header__list">
               <a href="about.html">About</a>
