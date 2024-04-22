@@ -12,6 +12,7 @@ import TimeLocation from "../layouts/TimeLocation/TimeLocation";
 import Footer from "../layouts/Footer/Footer";
 import "../../assets/dist/css/main.css";
 import PageLoader from "../layouts/PageLoader/PageLoader";
+import ScrollBack from "../layouts/ScrollBack/ScrollBack";
 
 const Home = () => {
   return (
@@ -52,20 +53,11 @@ const Home = () => {
       </main>
       {/* =================== MAIN SECTION ENDS ============================= */}
       {/* SCROLL BACK TO TOP BEGINS */}
-      <div className="scroll-to-top">
-        <i className="ri-arrow-up-line" />
-      </div>
+      <ScrollBack />
       {/* SCROLL BACK TO TOP ENDS */}
       {/* =================== SITE FOOTER BEGINS ============================= */}
       <Footer />
       {/* =================== SITE FOOTER ENDS ============================= */}
-      {/* JQUERY */}
-      {/* loading in JQuery locally if CDN failed */}
-      {/* Owl Carousel script */}
-      {/* JQuery Credit Card script */}
-      {/* Animate On Scroll script */}
-      {/* Lightbox script */}
-      {/* Main (custom) script */}
     </>
   );
 };

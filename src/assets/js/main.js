@@ -135,43 +135,43 @@ AOS.init({
 
 
 // SCROLL BACK TO TOP ================================ // 
-let scrollTopEl = document.querySelector(".scroll-to-top");
+// let scrollTopEl = document.querySelector(".scroll-to-top");
 
-if (scrollTopEl) window.addEventListener("scroll", scrollToTop);
+// if (scrollTopEl) window.addEventListener("scroll", scrollToTop);
 
-function scrollToTop() {
+// function scrollToTop() {
 
-  const scrollable = document.documentElement.scrollHeight - window.innerHeight; // entire scrollabe space - the window's height = gives how much you can scroll
+//   const scrollable = document.documentElement.scrollHeight - window.innerHeight; // entire scrollabe space - the window's height = gives how much you can scroll
 
-  let scrolled = window.scrollY; // how far down user has scrolled
+//   let scrolled = window.scrollY; // how far down user has scrolled
 
-  let scrolledPerc = Math.floor((scrollable * 50) / 100); // how far down user has scrolled in percentage - in this example 30% of the scrollable
+//   let scrolledPerc = Math.floor((scrollable * 50) / 100); // how far down user has scrolled in percentage - in this example 30% of the scrollable
 
-  if (scrolled >= scrolledPerc) {
-    scrollTopEl.classList.add("active");
-  } else {
-    scrollTopEl.classList.remove("active");
-  }
+//   if (scrolled >= scrolledPerc) {
+//     scrollTopEl.classList.add("active");
+//   } else {
+//     scrollTopEl.classList.remove("active");
+//   }
 
-}
+// }
 
-function smoothScroll() {
+// function smoothScroll() {
 
-  if (!scrollTopEl) return;
+//   if (!scrollTopEl) return;
 
-  scrollTopEl.addEventListener("click", function () {
+//   scrollTopEl.addEventListener("click", function () {
 
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth"
-    });
+//     window.scrollTo({
+//       top: 0,
+//       left: 0,
+//       behavior: "smooth"
+//     });
 
-  });
+//   });
 
-}
+// }
 
-smoothScroll();
+// smoothScroll();
 
 
 // DONATION PAGE ============================ // 
