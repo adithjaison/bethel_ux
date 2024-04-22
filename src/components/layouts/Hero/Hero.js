@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css"
-
 const Hero = () => {
   return (
-    <div>
+    <>
+      {/* HERO SECTION STARTS */}
       <section className="hero full-width">
         <div className="hero__carousel owl-carousel" id="hero-carousel">
           {/* Homepage slider */}
@@ -20,7 +20,7 @@ const Hero = () => {
                   veniam vitae repudiandae, reprehenderit ducimus at.
                 </p>
                 <div className="hero__cta">
-                  <a href="/" className="button">
+                  <a href="" className="button">
                     Learn more
                   </a>
                 </div>
@@ -43,7 +43,7 @@ const Hero = () => {
                   veniam vitae repudiandae, reprehenderit ducimus at.
                 </p>
                 <div className="hero__cta">
-                  <a href="/" className="button">
+                  <a href="" className="button">
                     Learn more
                   </a>
                 </div>
@@ -56,7 +56,9 @@ const Hero = () => {
         </div>{" "}
         {/* #hero-carousel ends */}
       </section>
-    </div>
+      {/* .hero ends */}
+      {/* HERO SECTION ENDS */}
+    </>
   );
 };
 

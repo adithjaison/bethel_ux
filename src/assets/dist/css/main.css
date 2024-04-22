@@ -3392,39 +3392,13 @@ button[type="submit"].button--link:hover {
   }
 }
 
-.card__image {
-  width: 100%;
-  height: 100%;
-}
 
-.card__body, .card__footer {
-  position: relative;
-  z-index: 10;
-}
+
 
 .card--event {
   justify-content: flex-start;
 }
 
-.card.gallery__card .card__header::before {
-  width: calc(100% - 4rem);
-  height: calc(100% - 4rem);
-  background-color: transparent;
-  border: 0.2rem solid #ead94c;
-  transition: transform 0.3s ease-out;
-}
-
-@media screen and (min-width: 56.3125em) {
-  .card.gallery__card .card__header::before {
-    transform: translate(-50%, -50%) rotate(-35deg) scale(0);
-  }
-}
-
-@media screen and (min-width: 56.3125em) {
-  .card.gallery__card:hover .card__header::before {
-    transform: translate(-50%, -50%) rotate(0) scale(1);
-  }
-}
 
 .card.card--picture {
   border: 0.2rem solid #ead94c;
@@ -3444,14 +3418,9 @@ button[type="submit"].button--link:hover {
   transform: rotate(45deg);
 }
 
-.card.card--picture .card__header {
-  width: calc(100% - 4rem);
-  height: calc(50rem - 4rem);
-}
 
-.card.card--picture .card__footer {
-  margin-bottom: 2rem;
-}
+
+
 
 .card.card--picture.card--square {
   width: 15rem;
@@ -3462,10 +3431,7 @@ button[type="submit"].button--link:hover {
   left: -10rem;
 }
 
-.card.card--picture.card--square .card__header {
-  width: calc(15rem - 2rem);
-  height: calc(15rem - 2rem);
-}
+
 
 .card--shop .sale-banner {
   background-color: #51a3a3;
@@ -3497,25 +3463,6 @@ button[type="submit"].button--link:hover {
   background-color: #ead94c;
   color: #ffffff;
 }
-
-.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 20;
-  width: 5rem;
-  height: 5rem;
-  font-size: 3rem;
-  background-color: #274f73;
-  color: #ffffff;
-  border-radius: 50%;
-}
-
-.owl-carousel .owl-nav button.owl-prev:hover, .owl-carousel .owl-nav button.owl-next:hover {
-  background-color: #ead94c;
-}
-
-
 
 #event-carousel {
   position: relative;
@@ -3897,78 +3844,6 @@ button[type="submit"].button--link:hover {
   color: rgba(255, 255, 255, 0.6);
 }
 
-
-
-
-
-.last-sermon .sermon__metas {
-  justify-content: flex-start;
-}
-
-.last-sermon .sermon__content .title {
-  margin-bottom: 1rem;
-}
-
-.our-gallery .row {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.our-gallery .gallery-link {
-  display: block;
-}
-
-.our-gallery.gallery--equal-grid .gallery__card {
-  height: 30rem;
-}
-
-.our-gallery.gallery--unequal-grid .row {
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-}
-
-@media screen and (min-width: 34.5625em) {
-  .our-gallery.gallery--unequal-grid .four,
-  .our-gallery.gallery--unequal-grid .three {
-    margin: 2rem 0;
-  }
-  .our-gallery.gallery--unequal-grid .four .stretch-vertical,
-  .our-gallery.gallery--unequal-grid .three .stretch-vertical {
-    height: 30rem;
-  }
-}
-
-@media screen and (min-width: 56.3125em) {
-  .our-gallery.gallery--unequal-grid .three,
-  .our-gallery.gallery--unequal-grid .four {
-    margin: 0;
-  }
-  .our-gallery.gallery--unequal-grid .three .stretch-vertical,
-  .our-gallery.gallery--unequal-grid .four .stretch-vertical {
-    height: calc(30rem * 2);
-  }
-  .our-gallery.gallery--unequal-grid .five,
-  .our-gallery.gallery--unequal-grid .six {
-    margin-top: calc(
- (-30rem) + 2rem);
-  }
-  .our-gallery.gallery--unequal-grid .five .gallery__card,
-  .our-gallery.gallery--unequal-grid .six .gallery__card {
-    height: calc((30rem) - 2rem);
-  }
-}
-
-.our-gallery.gallery--unequal-grid .equal-height {
-  height: 30rem;
-}
-
-.our-gallery.gallery--unequal-grid .stretch-vertical {
-  height: calc(30rem * 2);
-}
-
-.our-gallery.gallery--unequal-grid .stretch-horizontal {
-  height: 30rem;
-}
 
 .our-testimonial {
   position: relative;

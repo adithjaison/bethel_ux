@@ -1,0 +1,14 @@
+.last-sermon .sermon__metas {
+  justify-content: flex-start;
+}
+
+.last-sermon .sermon__content .title {
+  margin-bottom: 1rem;
+}
+.card.card--picture .card__footer {
+  margin-bottom: 2rem;
+}
+.card__body, .card__footer {
+  position: relative;
+  z-index: 10;
+}

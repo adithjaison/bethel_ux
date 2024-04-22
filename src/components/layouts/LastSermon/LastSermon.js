@@ -1,6 +1,7 @@
 import React from "react";
 import AOS from 'aos';
 import Sermon1 from "../../../assets/images/sermon-1@1.5x.jpg";
+import "./style.css"
 
 const LastSermon = () => {
   React.useEffect(() => {
