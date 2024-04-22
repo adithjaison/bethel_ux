@@ -1,7 +1,36 @@
 import React from "react";
+import AOS from 'aos';
 import Sermon1 from "../../../assets/images/sermon-1@1.5x.jpg";
 
 const LastSermon = () => {
+  React.useEffect(() => {
+    AOS.init({ once: true });
+    setupScrollToTop();
+  }, []);
+  const setupScrollToTop = () => {
+    const scrollTopEl = document.querySelector(".scroll-to-top");
+    if (!scrollTopEl) return;
+
+    window.addEventListener("scroll", () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = window.scrollY;
+      const scrolledPerc = Math.floor((scrollable * 50) / 100);
+
+      if (scrolled >= scrolledPerc) {
+        scrollTopEl.classList.add("active");
+      } else {
+        scrollTopEl.classList.remove("active");
+      }
+    });
+
+    scrollTopEl.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+      });
+    });
+  };
   return (
     <section className="last-sermon default-section-spacing">
       <div className="container">

@@ -1,84 +1,65 @@
-import React, { useState, useEffect } from "react";
-import DarkLogo from "../../../assets/images/logo-dark.png";
-import LightLogo from "../../../assets/images/logo-light.png";
+import React, { useEffect, useState, useRef } from "react";
 import "./style.css";
+import LogoDark from "../../../assets/images/logo-dark.png"
+import LogoLight from "../../../assets/images/logo-light.png"
 
 const Header = () => {
-  // State variables to manage logo and menu toggles
+  const headerRef = useRef(null);
+  const [menuOpened, setMenuOpened] = useState(false);
   const [scrollClasses, setScrollClasses] = useState("");
-  const [scrollLogo, setScrollLogo] = useState("");
+  const [brandLogoUrl, setBrandLogoUrl] = useState(LogoLight);
+
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setScrollClasses("dark-text white-bg");
+      setBrandLogoUrl(LogoDark);
+    } else {
+      setScrollClasses("");
+      setBrandLogoUrl(LogoLight);
+    }
+  };
+
+  const toggleMenu = () => {
+    setMenuOpened(!menuOpened);
+  };
 
   useEffect(() => {
-    // Function to handle scroll events
-    const handleScroll = () => {
-      // Calculate scroll amount
-      const scrollAmount = 100;
-      const scrolled = window.scrollY;
-
-      // Check if scroll amount is exceeded
-      if (scrolled > scrollAmount) {
-        setScrollClasses("dark-text white-bg");
-        setScrollLogo(DarkLogo);
-      } else {
-        setScrollClasses("light-text transparent");
-        setScrollLogo(LightLogo);
-      }
-    };
-
-    // Add scroll event listener
+    const header = headerRef.current;
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  // Function to open mobile menu
-  const openMenu = () => {
-    const menuToggle = document.querySelector("[data-toggle=mobile-menu]");
-    const menuMobile = document.getElementById(
-      menuToggle.getAttribute("aria-controls")
-    );
-    const open = JSON.parse(menuToggle.getAttribute("aria-expanded"));
-    menuToggle.setAttribute("aria-expanded", !open);
-    menuMobile.classList.toggle("active");
-    menuToggle.classList.toggle("rotate");
-    document.body.classList.toggle("overflow-hidden");
-  };
-
-  // Function to prevent default action for dropdown links
-  const preventDefaultAction = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <header
-      className={`header ${scrollClasses} fixed`}
-      data-onscroll-classes={scrollClasses}
-      data-onscroll-logo={scrollLogo}
+      ref={headerRef}
+      className={`header transparent fixed light-text ${scrollClasses}`}
+      data-onscroll-logo={LogoDark}
     >
       <div className="container">
         <nav className="header__nav bottom-nav">
           <div className="header__logo brand--logo">
             <a href="/">
-              <img src={scrollLogo} alt="Greater Love Church" />
+              <img src={brandLogoUrl} alt="Greater Love Church" />
             </a>
           </div>
           <div className="header__mobile--opener hide-on-lg">
             <button
               className="header__mobile--icon"
-              aria-expanded="false"
+              aria-expanded={menuOpened}
               aria-controls="mobile-menu"
-              data-toggle="mobile-menu"
-              onClick={openMenu}
+              onClick={toggleMenu}
             >
               <span className="line" />
               <span className="line" />
               <span className="line" />
             </button>
           </div>
-          <ul className="header__navitems show-on-lg" id="mobile-menu">
+          <ul
+            className={`header__navitems ${menuOpened ? "show" : "hide-on-lg"}`}
+            id="mobile-menu"
+          >
             <li className="header__extra">
               <div className="cta">
                 <a href="donations.html" className="button button-block-sm">
@@ -174,13 +155,6 @@ const Header = () => {
               <a href="contact.html">Contact</a>
             </li>
           </ul>
-          <div className="header__extra desktop-version">
-            <div className="cta hide-on-sm show-on-lg">
-              <a href="donations.html" className="button">
-                Donate
-              </a>
-            </div>
-          </div>
         </nav>
       </div>
     </header>
