@@ -58,7 +58,7 @@ const Header = () => {
               </div>
             </li>
             <li className="header__list active"><a href="/">Home</a></li>
-            <li className="header__list"><a href="about.html">About</a></li>
+            <li className="header__list"><a href="/about">About</a></li>
             <li className="header__list"><a href="sermons.html">Sermons</a></li>
             <li className="header__list"><a href="ministries.html">Ministries</a></li>
             <li className="header__list"><a href="events.html">Events</a></li>

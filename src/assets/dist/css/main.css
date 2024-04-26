@@ -1066,48 +1066,7 @@ s {
   }
 }
 
-.banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  color: #ffffff;
-  height: 30rem;
-  padding-bottom: 2rem;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/banner.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
-@media screen and (min-width: 87.5625em) {
-  .banner {
-    height: 40rem;
-  }
-}
-
-@media screen and (min-width: 34.5625em) {
-  .banner__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-}
-
-@media screen and (min-width: 34.5625em) {
-  .banner__content .breadcrumb {
-    margin-left: 1.5rem;
-  }
-}
-
-.banner__heading {
-  margin-bottom: 2rem;
-}
-
-@media screen and (min-width: 34.5625em) {
-  .banner__heading {
-    margin-bottom: 0;
-  }
-}
 
 .single__metas {
   margin: calc(2rem * 2) 0;
@@ -1183,74 +1142,7 @@ s {
   height: 100%;
 }
 
-.footer {
-  background-color: #0a151e;
-  padding: 5rem 0;
-  color: #ffffff;
-}
 
-.footer a,
-.footer i {
-  color: #ffffff;
-}
-
-.footer__top .logo-wrapper {
-  width: 6rem;
-  height: 6rem;
-}
-
-.footer__top img {
-  width: 100%;
-}
-
-.footer__bottom {
-  margin-top: 2rem;
-}
-
-@media screen and (min-width: 56.3125em) {
-  .footer__bottom .credit {
-    text-align: center;
-  }
-}
-
-.footer__bottom .credit a:hover {
-  color: #ead94c;
-}
-
-.footer__bottom .social {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-@media screen and (min-width: 34.5625em) {
-  .footer__bottom .social {
-    margin-top: 2rem;
-  }
-}
-
-@media screen and (min-width: 56.3125em) {
-  .footer__bottom .social {
-    justify-content: flex-end;
-    margin-top: 0;
-  }
-}
-
-.footer__bottom .social__icons {
-  margin-left: 2rem;
-}
-
-.footer__bottom .social__icons a:not(:last-child) {
-  margin-right: 1rem;
-}
-
-.footer__bottom .social__icons i {
-  font-size: 2.5rem;
-}
-
-.footer__bottom .social__icons i:hover {
-  color: #ead94c;
-}
 
 [data-aos][data-aos][data-aos-duration="50"], body[data-aos-duration="50"] [data-aos] {
   transition-duration: 50ms;
@@ -3233,27 +3125,7 @@ body.lb-disable-scrolling {
 
 
 
-.breadcrumb {
-  display: flex;
-  text-transform: uppercase;
-}
 
-.breadcrumb__home--link {
-  font-weight: 700;
-}
-
-.breadcrumb span {
-  margin: 0 1rem;
-  width: 1.2rem;
-  height: 1.2rem;
-  border-top: 0.4rem solid #d1d1d1;
-  border-right: 0.4rem solid #d1d1d1;
-  transform: rotate(45deg) translateY(50%);
-}
-
-.breadcrumb__current--page-link {
-  opacity: 0.6;
-}
 
 .button,
 input[type="submit"],
@@ -3369,36 +3241,7 @@ button[type="submit"].button--link:hover {
 }
 
 
-.card.card--picture {
-  border: 0.2rem solid #ead94c;
-}
 
-.card.card--picture::before {
-  content: "";
-  display: block;
-  width: 30rem;
-  height: 30rem;
-  background-color: #ead94c;
-  position: absolute;
-  left: -4rem;
-  bottom: -12rem;
-  z-index: 5;
-  transform-origin: top left;
-  transform: rotate(45deg);
-}
-
-
-
-
-
-.card.card--picture.card--square {
-  width: 15rem;
-  height: 15rem;
-}
-
-.card.card--picture.card--square::before {
-  left: -10rem;
-}
 
 
 
@@ -3762,42 +3605,9 @@ button[type="submit"].button--link:hover {
   transform: translateX(-50%);
 }
 
-.our-stats {
-  padding: 8rem 0;
-  color: #ffffff;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/background-6.jpg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
-.our-stats__box .heading {
-  font-family: "Lobster Two", cursive;
-  font-size: 5rem;
-  position: relative;
-  display: inline-block;
-  width: auto;
-  margin-bottom: 2rem;
-}
 
-.our-stats__box .heading::before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 0.4rem;
-  background-color: #ead94c;
-  bottom: -0.8rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
-.staff {
-  color: #ffffff;
-}
-
-.staff__title {
-  margin: 1rem 0 2rem;
-}
 
 .all-events__events {
   margin-bottom: 4rem;
@@ -4046,19 +3856,7 @@ button[type="submit"].button--link:hover {
   border-color: #842722;
 }
 
-.staffs-single__details {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 0.1rem solid #f5f5f5;
-}
 
-.staffs-single__details .staff__title {
-  margin-bottom: 0;
-}
-
-.staffs-single__testimonial h3 {
-  margin-bottom: 1rem;
-}
 
 
 .elements h2 {
