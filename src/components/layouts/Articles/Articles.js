@@ -2,7 +2,7 @@ import React from "react";
 import Post1 from "../../../assets/images/post-1@1.5x.jpg";
 import Post2 from "../../../assets/images/post-2@1.5x.jpg";
 import Post3 from "../../../assets/images/sermon-1@1.5x.jpg";
-
+import "./style.css";
 const Articles = () => {
   return (
     <div>

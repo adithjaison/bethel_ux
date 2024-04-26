@@ -1,5 +1,9 @@
 import React from "react";
+import User1 from "../../../assets/images/user-1.jpg"
+import User2 from "../../../assets/images/user-2.jpg"
+import User3 from "../../../assets/images/user-3.jpg"
 
+import "./style.css"
 const Testimonials = () => {
   return (
     <div>
@@ -23,7 +27,7 @@ const Testimonials = () => {
                         <div className="card card--picture card--square testimonial__user">
                           <div className="card__header">
                             <img
-                              src="images/user-1.jpg"
+                              src={User1}
                               alt="A man"
                               className="card__image"
                             />
@@ -58,7 +62,7 @@ const Testimonials = () => {
                         <div className="card card--picture card--square testimonial__user">
                           <div className="card__header">
                             <img
-                              src="images/user-3.jpg"
+                              src={User3}
                               alt="A woman"
                               className="card__image"
                             />
@@ -93,7 +97,7 @@ const Testimonials = () => {
                         <div className="card card--picture card--square testimonial__user">
                           <div className="card__header">
                             <img
-                              src="images/user-2.jpg"
+                              src={User2}
                               alt="A man"
                               className="card__image"
                             />

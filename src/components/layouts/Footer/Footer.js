@@ -1,5 +1,6 @@
 import React from "react";
-
+import LogoSymbol from "../../../assets/images/logo-sm.png";
+import "./style.css"
 const Footer = () => {
   return (
     <div>
@@ -8,7 +9,7 @@ const Footer = () => {
           <div className="footer__top display-flex justify-align-center">
             <div className="footer__logo">
               <div className="logo-wrapper">
-                <img src="images/logo-sm.svg" alt="Small logo" />
+                <img src={LogoSymbol} alt="Small logo" />
               </div>
             </div>
           </div>
@@ -31,13 +32,13 @@ const Footer = () => {
                 <div className="footer__info social">
                   <span>Follow us on social medias</span>
                   <div className="social__icons">
-                    <a href="">
+                    <a href="/">
                       <i className="ri-facebook-line" />
                     </a>
-                    <a href="">
+                    <a href="/">
                       <i className="ri-twitter-line" />
                     </a>
-                    <a href="">
+                    <a href="/">
                       <i className="ri-linkedin-line" />
                     </a>
                   </div>

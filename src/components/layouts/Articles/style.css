@@ -1,0 +1,57 @@
+.card__footer {
+  position: relative;
+  z-index: 10;
+}
+.card__footer {
+  margin-bottom: 2rem;
+}
+.section-heading {
+  margin-bottom: 4rem;
+}
+
+.section-heading span {
+  font-family: "Lobster Two", cursive;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.section-heading span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.4rem;
+  background-color: #ead94c;
+  bottom: -0.8rem;
+  left: 0;
+}
+.sermon__metas {
+  display: flex;
+  justify-content: center;
+}
+.sermon__metas {
+  justify-content: flex-start;
+}
+.sermon__metas .meta, .blog__metas .meta {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.sermon__metas .meta:not(:last-child), .blog__metas .meta:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.sermon__metas .meta i, .blog__metas .meta i {
+  margin-right: 0.4rem;
+}
+@media screen and (min-width: 34.5625em) {
+  .recent-articles [class*="flex-"]:nth-child(3) {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 56.3125em) {
+  .recent-articles [class*="flex-"]:nth-child(3) {
+    margin: 0;
+  }
+}
