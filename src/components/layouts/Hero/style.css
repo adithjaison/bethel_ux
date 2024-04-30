@@ -55,7 +55,7 @@
 }
 
 #hero-carousel #first-slide {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/hero-1.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/jesus.jpg");
 }
 
 #hero-carousel #second-slide {
@@ -140,7 +140,7 @@
 }
 
 .hero-2 {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/hero-1.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/images/jesus.jpg");
   display: flex;
   flex-direction: column;
   justify-content: center;
