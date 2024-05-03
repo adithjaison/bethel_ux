@@ -4,6 +4,7 @@ import Sermon1 from "../../../assets/images/sermon-1@1.5x.jpg";
 import Event2 from "../../../assets/images/event-2@1.5x.jpg";
 import Event3 from "../../../assets/images/event-3@1.5x.jpg";
 import Pagination from "../Pagination/Pagination";
+import LearnMoreLink from "../LearnMoreLink/LearnMoreLink";
 
 const eventData = [
   {
@@ -117,9 +118,7 @@ const AllEvents = () => {
                       <h2>{event.title}</h2>
                     </div>
                     <div className="event__link">
-                      <a href="events-single.html" className="button">
-                        Learn more
-                      </a>
+                      <LearnMoreLink className="button" href="events-single.html" />
                     </div>
                   </div>
                 </div>
