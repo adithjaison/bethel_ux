@@ -6,6 +6,7 @@ import Layout from "./components/layouts/Layout/Layout";
 import Sermons from "./components/pages/Sermons/Sermons";
 import Ministries from "./components/pages/Ministries/Ministries";
 import Events from "./components/pages/Events/Events";
+import Blog from "./components/pages/Blog/Blog";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="/sermons" element={<Layout Page={Sermons} />} exact />
             <Route path="/ministries" element={<Layout Page={Ministries} />} exact />
             <Route path="/events" element={<Layout Page={Events} />} exact />
+            <Route path="/blog" element={<Layout Page={Blog} />} exact />
         </Routes>
       </BrowserRouter>
     </div>

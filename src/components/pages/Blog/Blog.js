@@ -1,16 +1,17 @@
 import React from "react";
 import Banner from "../../layouts/Banner/Banner";
 import TimeLocation from "../../layouts/TimeLocation/TimeLocation";
-import AllMinistries from "../../layouts/AllMinistries/AllMinistries";
-const Ministries = () => {
+import AllPosts from "../../layouts/AllPosts/AllPosts";
+
+const Blog = () => {
   return (
     <>
       {/* BANNER SECTION STARTS */}
-      <Banner BannerHeader="Ministries" />
+      <Banner BannerHeader="Blog" />
       {/* BANNER SECTION ENDS */}
-      {/* ALL MINISTRIES SECTION STARTS */}
-      <AllMinistries />
-      {/* ALL MINISTRIES SECTION ENDS */}
+      {/* ALL POSTS SECTION STARTS */}
+      <AllPosts />
+      {/* ALL POSTS SECTION ENDS */}
       {/* TIME AND LOCATION STARTS */}
       <TimeLocation />
       {/* TIME AND LOCATION ENDS */}
@@ -18,4 +19,4 @@ const Ministries = () => {
   );
 };
 
-export default Ministries;
+export default Blog;

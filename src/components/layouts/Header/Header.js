@@ -62,7 +62,7 @@ const Header = () => {
             <li className="header__list"><a href="/sermons">Sermons</a></li>
             <li className="header__list"><a href="/ministries">Ministries</a></li>
             <li className="header__list"><a href="/events">Events</a></li>
-            <li className="header__list"><a href="blog.html">Blog</a></li>
+            <li className="header__list"><a href="/blog">Blog</a></li>
             <li className="header__list"><a href="contact.html">Contact</a></li>
           </ul>
           <div className="header__extra desktop-version">
