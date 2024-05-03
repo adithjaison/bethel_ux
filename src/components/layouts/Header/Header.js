@@ -63,7 +63,7 @@ const Header = () => {
             <li className="header__list"><a href="/ministries">Ministries</a></li>
             <li className="header__list"><a href="/events">Events</a></li>
             <li className="header__list"><a href="/blog">Blog</a></li>
-            <li className="header__list"><a href="contact.html">Contact</a></li>
+            <li className="header__list"><a href="/contact">Contact</a></li>
           </ul>
           <div className="header__extra desktop-version">
             <div className="cta hide-on-sm show-on-lg">

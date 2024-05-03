@@ -1,15 +1,36 @@
 import React from "react";
-import User1 from "../../../assets/images/user-1.jpg"
-import User2 from "../../../assets/images/user-2.jpg"
-import User3 from "../../../assets/images/user-3.jpg"
+import User1 from "../../../assets/images/user-1.jpg";
+import User2 from "../../../assets/images/user-2.jpg";
+import User3 from "../../../assets/images/user-3.jpg";
 
-import "./style.css"
+import "./style.css";
+
+const testimonialData = [
+  {
+    userImage: User1,
+    userName: "George E. Pugh",
+    text:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque animi, magni nisi dolorum nam debitis atque doloremque iure eaque mollitia. Autem cum explicabo libero voluptatum, at suscipit officia, dolore, quia sed cumque repudiandae quo voluptas fugiat laudantium doloribus reprehenderit. Nulla harum perspiciatis recusandae ratione possimus."
+  },
+  {
+    userImage: User3,
+    userName: "Nancy A. Austin",
+    text:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque animi, magni nisi dolorum nam debitis atque doloremque iure eaque mollitia. Autem cum explicabo libero voluptatum, at suscipit officia, dolore, quia sed cumque repudiandae quo voluptas fugiat laudantium doloribus reprehenderit. Nulla harum perspiciatis recusandae ratione possimus."
+  },
+  {
+    userImage: User2,
+    userName: "Joe K. Liley",
+    text:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque animi, magni nisi dolorum nam debitis atque doloremque iure eaque mollitia. Autem cum explicabo libero voluptatum, at suscipit officia, dolore, quia sed cumque repudiandae quo voluptas fugiat laudantium doloribus reprehenderit. Nulla harum perspiciatis recusandae ratione possimus."
+  }
+];
+
 const Testimonials = () => {
   return (
     <div>
       <section className="our-testimonial default-section-spacing background-secondary">
         <div className="our-testimonial__background--cover" />
-        {/* .our-testimonial__background--cover ends */}
         <div className="our-testimonial__content">
           <div className="container">
             <div className="row align-items-center">
@@ -19,123 +40,37 @@ const Testimonials = () => {
                   <span>Testimonials</span>
                   <h2>What people are saying...</h2>
                 </div>
-                {/* .section-heading ends */}
                 <div className="row">
-                  <div className="flex-md-6 flex-lg-12 mar-b-sm">
-                    <div className="testimonial">
-                      <div className="testimonial__avatar">
-                        <div className="card card--picture card--square testimonial__user">
-                          <div className="card__header">
-                            <img
-                              src={User1}
-                              alt="A man"
-                              className="card__image"
-                            />
-                          </div>
-                          {/* .card__header ends */}
-                          <div className="card__footer">
-                            <div className="testimonial__author">
-                              George E. Pugh
+                  {testimonialData.map((testimonial, index) => (
+                    <div className="flex-md-6 flex-lg-12 mar-b-sm" key={index}>
+                      <div className="testimonial">
+                        <div className="testimonial__avatar">
+                          <div className="card card--picture card--square testimonial__user">
+                            <div className="card__header">
+                              <img
+                                src={testimonial.userImage}
+                                alt={testimonial.userName}
+                                className="card__image"
+                              />
+                            </div>
+                            <div className="card__footer">
+                              <div className="testimonial__author">
+                                {testimonial.userName}
+                              </div>
                             </div>
                           </div>
-                          {/* .card__footer ends */}
                         </div>
-                        {/* .card */}
-                      </div>
-                      {/* .testimonial__avatar ends */}
-                      <div className="testimonial__text text-white">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Itaque animi, magni nisi dolorum nam debitis atque
-                        doloremque iure eaque mollitia. Autem cum explicabo
-                        libero voluptatum, at suscipit officia, dolore, quia sed
-                        cumque repudiandae quo voluptas fugiat laudantium
-                        doloribus reprehenderit. Nulla harum perspiciatis
-                        recusandae ratione possimus.
+                        <div className="testimonial__text text-white">
+                          {testimonial.text}
+                        </div>
                       </div>
                     </div>
-                    {/* .testimonial */}
-                  </div>
-                  {/* .flex-* ends */}
-                  <div className="flex-md-6 flex-lg-12 mar-b-sm">
-                    <div className="testimonial">
-                      <div className="testimonial__avatar">
-                        <div className="card card--picture card--square testimonial__user">
-                          <div className="card__header">
-                            <img
-                              src={User3}
-                              alt="A woman"
-                              className="card__image"
-                            />
-                          </div>
-                          {/* .card__header ends */}
-                          <div className="card__footer">
-                            <div className="testimonial__author">
-                              Nancy A. Austin
-                            </div>
-                          </div>
-                          {/* .card__footer ends */}
-                        </div>
-                        {/* .card */}
-                      </div>
-                      {/* .testimonial__avatar ends */}
-                      <div className="testimonial__text text-white">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Itaque animi, magni nisi dolorum nam debitis atque
-                        doloremque iure eaque mollitia. Autem cum explicabo
-                        libero voluptatum, at suscipit officia, dolore, quia sed
-                        cumque repudiandae quo voluptas fugiat laudantium
-                        doloribus reprehenderit. Nulla harum perspiciatis
-                        recusandae ratione possimus.
-                      </div>
-                    </div>
-                    {/* .testimonial */}
-                  </div>
-                  {/* .flex-* ends */}
-                  <div className="flex-md-12 flex-lg-12">
-                    <div className="testimonial">
-                      <div className="testimonial__avatar">
-                        <div className="card card--picture card--square testimonial__user">
-                          <div className="card__header">
-                            <img
-                              src={User2}
-                              alt="A man"
-                              className="card__image"
-                            />
-                          </div>
-                          {/* .card__header ends */}
-                          <div className="card__footer">
-                            <div className="testimonial__author">
-                              Joe K. Liley
-                            </div>
-                          </div>
-                          {/* .card__footer ends */}
-                        </div>
-                        {/* .card */}
-                      </div>
-                      {/* .testimonial__avatar ends */}
-                      <div className="testimonial__text text-white">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Itaque animi, magni nisi dolorum nam debitis atque
-                        doloremque iure eaque mollitia. Autem cum explicabo
-                        libero voluptatum, at suscipit officia, dolore, quia sed
-                        cumque repudiandae quo voluptas fugiat laudantium
-                        doloribus reprehenderit. Nulla harum perspiciatis
-                        recusandae ratione possimus.
-                      </div>
-                    </div>
-                    {/* .testimonial */}
-                  </div>
-                  {/* .flex-* ends */}
+                  ))}
                 </div>
-                {/* .row ends */}
               </div>
-              {/* .flex-* ends */}
             </div>
-            {/* .row ends */}
           </div>
-          {/* .container ends */}
         </div>
-        {/* .our-testimonial__content ends */}
       </section>
     </div>
   );
