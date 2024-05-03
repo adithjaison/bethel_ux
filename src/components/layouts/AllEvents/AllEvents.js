@@ -3,6 +3,7 @@ import Event1 from "../../../assets/images/event-1@1.5x.jpg";
 import Sermon1 from "../../../assets/images/sermon-1@1.5x.jpg";
 import Event2 from "../../../assets/images/event-2@1.5x.jpg";
 import Event3 from "../../../assets/images/event-3@1.5x.jpg";
+import Pagination from "../Pagination/Pagination";
 
 const eventData = [
   {
@@ -62,7 +63,9 @@ const AllEvents = () => {
             <div className="flex-md-3 flex-lg-4">
               <div className="search__result">
                 <div className="text leading uppercase bold">Results</div>
-                <p>Showing {eventData.length} out of {eventData.length} events</p>
+                <p>
+                  Showing {eventData.length} out of {eventData.length} events
+                </p>
               </div>
             </div>
             <div className="flex-md-9 flex-lg-8">
@@ -103,8 +106,7 @@ const AllEvents = () => {
                         <span>{event.date}</span>
                       </div>
                       <div className="event__meta--time meta">
-                        <i className="ri-time-line" />{" "}
-                        <span>{event.time}</span>
+                        <i className="ri-time-line" /> <span>{event.time}</span>
                       </div>
                       <div className="event__meta--location meta">
                         <i className="ri-map-pin-line" />{" "}
@@ -125,27 +127,7 @@ const AllEvents = () => {
             ))}
           </div>
         </div>
-        <div className="pagination">
-          <span className="pagination__arrow">
-            <a href="/">
-              <i className="ri-arrow-left-s-line" />
-            </a>
-          </span>
-          <span className="pagination__number">
-            <a href="/">1</a>
-          </span>
-          <span className="pagination__number active">
-            <a href="/">2</a>
-          </span>
-          <span className="pagination__number">
-            <a href="/">3</a>
-          </span>
-          <span className="pagination__arrow">
-            <a href="/">
-              <i className="ri-arrow-right-s-line" />
-            </a>
-          </span>
-        </div>
+        <Pagination />
       </div>
     </div>
   );
