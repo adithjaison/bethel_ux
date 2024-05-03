@@ -18,7 +18,7 @@ const Banner = (props) => {
               <a href="/">Home</a>
             </div>
             <span></span>
-            <div className="breadcrumb__current--page-link">About</div>
+            <div className="breadcrumb__current--page-link">{props.BannerHeader}</div>
           </div>
           {/* .breadcrumb ends */}
         </div>

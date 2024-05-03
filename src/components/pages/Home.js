@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../layouts/Header/Header";
 import Hero from "../layouts/Hero/Hero";
 import NextEvent from "../layouts/NextEvent/NextEvent";
 import LastSermon from "../layouts/LastSermon/LastSermon";
@@ -9,55 +8,39 @@ import Testimonials from "../layouts/Testimonials/Testimonials";
 import Articles from "../layouts/Articles/Articles";
 import Subscription from "../layouts/Subscription/Subscription";
 import TimeLocation from "../layouts/TimeLocation/TimeLocation";
-import Footer from "../layouts/Footer/Footer";
 import "../../assets/dist/css/main.css";
-import PageLoader from "../layouts/PageLoader/PageLoader";
-import ScrollBack from "../layouts/ScrollBack/ScrollBack";
+
 
 const Home = () => {
   return (
     <>
-      <PageLoader />
-      {/* =================== SITE HEADER BEGINS ============================= */}
-      <Header />
-      {/* =================== SITE HEADER ENDS ============================= */}
-      {/* =================== MAIN SECTION BEGINS ============================= */}
-      <main>
-        {/* HERO SECTION STARTS */}
-        <Hero />
-        {/* HERO SECTION ENDS */}
-        {/* NEXT EVENT STARTS */}
-        <NextEvent />
-        {/* NEXT EVENT ENDS */}
-        {/* LAST SERMON SECTION STARTS */}
-        <LastSermon />
-        {/* LAST SERMON SECTION ENDS */}
-        {/* OUR MINISTRIES SECTION STARTS */}
-        <Ministries />
-        {/* OUR MINISTRIES SECTION ENDS */}
-        {/* OUR GALLERY STARTS */}
-        <Gallery />
-        {/* OUR GALLERY ENDS */}
-        {/* OUR TESTIMONIALS SECTION STARTS */}
-        <Testimonials />
-        {/* OUR TESTIMONIALS SECTION ENDS */}
-        {/* RECENT ARTICLES STARTS */}
-        <Articles />
-        {/* RECENT ARTICLES ENDS */}
-        {/* SUBSCRIPTION SECTION STARTS */}
-        <Subscription />
-        {/* SUBSCRIPTION SECTION ENDS */}
-        {/* TIME AND LOCATION STARTS */}
-        <TimeLocation />
-        {/* TIME AND LOCATION ENDS */}
-      </main>
-      {/* =================== MAIN SECTION ENDS ============================= */}
-      {/* SCROLL BACK TO TOP BEGINS */}
-      <ScrollBack />
-      {/* SCROLL BACK TO TOP ENDS */}
-      {/* =================== SITE FOOTER BEGINS ============================= */}
-      <Footer />
-      {/* =================== SITE FOOTER ENDS ============================= */}
+      {/* HERO SECTION STARTS */}
+      <Hero />
+      {/* HERO SECTION ENDS */}
+      {/* NEXT EVENT STARTS */}
+      <NextEvent />
+      {/* NEXT EVENT ENDS */}
+      {/* LAST SERMON SECTION STARTS */}
+      <LastSermon />
+      {/* LAST SERMON SECTION ENDS */}
+      {/* OUR MINISTRIES SECTION STARTS */}
+      <Ministries />
+      {/* OUR MINISTRIES SECTION ENDS */}
+      {/* OUR GALLERY STARTS */}
+      <Gallery />
+      {/* OUR GALLERY ENDS */}
+      {/* OUR TESTIMONIALS SECTION STARTS */}
+      <Testimonials />
+      {/* OUR TESTIMONIALS SECTION ENDS */}
+      {/* RECENT ARTICLES STARTS */}
+      <Articles />
+      {/* RECENT ARTICLES ENDS */}
+      {/* SUBSCRIPTION SECTION STARTS */}
+      <Subscription />
+      {/* SUBSCRIPTION SECTION ENDS */}
+      {/* TIME AND LOCATION STARTS */}
+      <TimeLocation />
+      {/* TIME AND LOCATION ENDS */}
     </>
   );
 };
